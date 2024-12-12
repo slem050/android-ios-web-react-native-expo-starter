@@ -1,0 +1,50 @@
+{
+  "build": {
+    "production": {
+      "android": {
+        "autoIncrement": true,
+        "buildType": "apk"
+      },
+      "channel": "production",
+      "distribution": "store",
+      "ios": { "autoIncrement": "buildNumber" }
+    },
+    "staging": {
+      "android": {
+        "autoIncrement": true,
+        "buildType": "apk"
+      },
+      "channel": "staging",
+      "distribution": "store",
+      "ios": { "autoIncrement": "buildNumber" }
+    },
+    "qa": {
+      "android": {
+        "autoIncrement": true,
+        "buildType": "apk"
+      },
+      "channel": "qa",
+      "distribution": "store",
+      "ios": { "autoIncrement": "buildNumber" }
+    }
+  },
+  "cli": {
+    "appVersionSource": "remote",
+    "version": ">= 0.53.1"
+  },
+
+  "submit": {
+    "production": {
+      "android": {},
+      "ios": {}
+    },
+    "staging": {
+      "android": {},
+      "ios": {}
+    },
+    "qa": {
+      "android": {},
+      "ios": {}
+    }
+  }
+}

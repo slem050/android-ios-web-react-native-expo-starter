@@ -1,20 +1,39 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// FIXME: see how why did you render works
+// import './wdyr'
+import 'setimmediate'
+import 'react-native-reanimated'
+import '~i18n'
+import * as Device from 'expo-device'
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+import { Navigation } from '~navigation'
+import { Providers } from '~providers'
+import { enableAndroidBackgroundNotificationListener, startMockedServer } from '~services'
+
+// FIXME: there is some issue with miragejs that causes console.log to not work
+const DISABLE_CONSOLE_ENABLE_MOCKED_SERVER = false
+
+if (DISABLE_CONSOLE_ENABLE_MOCKED_SERVER) {
+  startMockedServer()
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+// TODO: Uncomment reactotron setup when using
+// const isUsingReactotron = true
+// if (__DEV__ && isUsingReactotron && !process.env.JEST_WORKER_ID) {
+//   require('./ReactotronConfig')
+// }
+
+// Workaround for the notifications received in background on android
+// src: https://github.com/expo/expo/issues/14078#issuecomment-1041294084
+if (Device.isDevice) {
+  enableAndroidBackgroundNotificationListener()
+}
+
+const App = (): JSX.Element => {
+  return (
+    <Providers>
+      <Navigation />
+    </Providers>
+  )
+}
+
+export default App

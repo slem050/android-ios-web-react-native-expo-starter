@@ -1,28 +1,27 @@
 {
   "expo": {
-    "name": "hadiyate",
-    "slug": "hadiyate",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+    "android": {
+      "jsEngine": "hermes"
     },
+    "assetBundlePatterns": ["**/*"],
     "ios": {
+      "jsEngine": "hermes",
       "supportsTablet": true
     },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+    "name": "Template",
+    "orientation": "portrait",
+    "owner": "binarapps",
+    "slug": "expo-typescript-template",
+    "splash": {
+      "backgroundColor": "#ffffff",
+      "image": "./assets/splash.png",
+      "resizeMode": "cover"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "userInterfaceStyle": "automatic",
+    "version": "2.1.0",
+    "plugins": ["expo-font", "expo-localization", "expo-secure-store"]
   }
 }

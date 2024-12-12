@@ -1,37 +1,35 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
-
-# dependencies
 node_modules/
-*package-lock.json
-
-# Expo
 .expo/
-dist/
-web-build/
-expo-env.d.ts
-
-# Native
-*.orig.*
+npm-debug.*
 *.jks
 *.p8
 *.p12
 *.key
 *.mobileprovision
+*.orig.*
+web-build/
 
-# Metro
-.metro-health-check*
-
-# debug
-npm-debug.*
-yarn-debug.*
-yarn-error.*
+# webstorm
+.idea/
 
 # macOS
 .DS_Store
-*.pem
 
-# local env files
-.env*.local
+# yarn
+yarn-error.log
 
-# typescript
-*.tsbuildinfo
+dist/
+
+# project files
+
+# CONFIG: uncomment following lines
+# .env
+# .env.qa
+# .env.production
+# .env.staging
+# Local Netlify folder
+.netlify
+
+# native files
+/android
+/ios
