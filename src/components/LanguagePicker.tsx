@@ -21,7 +21,7 @@ export const LanguagePicker: React.FC = () => {
 
   const { colorScheme } = useColorScheme()
   const { i18n } = useTranslation()
-  const language = "EN"
+  const language = 'EN'
   const isOpen = useSharedValue(false)
 
   const rotateZ = useDerivedValue(() => withTiming(isOpen.value ? 180 : 0))
