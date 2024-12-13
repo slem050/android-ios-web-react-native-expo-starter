@@ -1,26 +1,22 @@
 {
-  "name": "@binarapps/expo-ts-template",
-  "version": "2.1.0",
-  "description": "Expo template ready to develop mobile apps",
+  "name": "hadiyate-app",
+  "version": "1.0.0",
+  "description": "Hadiyate: A robust cross-platform business application built with React Native and Expo.",
   "keywords": [
     "expo",
-    "template",
-    "expo-template",
     "react-native",
-    "react-native-template",
-    "jest",
-    "eslint",
-    "prettier"
+    "business",
+    "mobile",
+    "web"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/binarapps/expo-ts-template.git"
+    "url": "https://github.com/slem050/hadiyate.git"
   },
   "bugs": {
-    "url": "https://github.com/binarapps/expo-ts-template/issues"
+    "url": "https://github.com/slem050/hadiyate/issues"
   },
-  "author": "BinarApps",
-  "license": "MIT",
+  "author": "slem050",
   "scripts": {
     "android:dev-client": "IS_DEV=1 npx expo run:android",
     "android": "expo run:android",

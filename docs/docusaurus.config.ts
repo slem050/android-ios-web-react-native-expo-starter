@@ -2,7 +2,7 @@ import type * as Preset from '@docusaurus/preset-classic'
 import type { Config } from '@docusaurus/types'
 import { themes as prismThemes } from 'prism-react-renderer'
 
-const repoLink = 'https://github.com/binarapps/expo-ts-template'
+const repoLink = 'https://github.com/slem050/hadiyate.git'
 
 const config: Config = {
   title: 'BACA - react native starter',
